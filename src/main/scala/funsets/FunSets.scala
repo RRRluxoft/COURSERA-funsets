@@ -19,7 +19,7 @@ object FunSets {
   /**
    * Returns the set of the one given element.
    */
-    def singletonSet(elem: Int): Set = outside => elem == outside
+    def singletonSet(elem: Int): Set = outside => elem eq outside
   
 
   /**
@@ -38,7 +38,7 @@ object FunSets {
    * Returns the difference of the two given sets,
    * the set of all elements of `s` that are not in `t`.
    */
-    def diff(s: Set, t: Set): Set = elem =>  contains(s, elem) && !contains(t, elem)
+    def diff(s: Set, t: Set): Set = elem => contains(s, elem) && !contains(t, elem)
   
   /**
    * Returns the subset of `s` for which `p` holds.
@@ -62,7 +62,7 @@ object FunSets {
     }
     iter(-bound)
   }
-  
+
   /**
    * Returns whether there exists a bounded integer within `s`
    * that satisfies `p`.
@@ -72,7 +72,7 @@ object FunSets {
   /**
    * Returns a set transformed by applying `f` to each element of `s`.
    */
-    def map(s: Set, f: Int => Int): Set = elem => forall(s, x=> f(x) == elem)
+    def map(s: Set, f: Int => Int): Set = elem => forall(s, x => f(x) == elem)
   
   /**
    * Displays the contents of a set
