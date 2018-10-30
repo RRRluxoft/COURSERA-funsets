@@ -2,7 +2,7 @@ import java.io.{File, FileInputStream, IOException}
 
 import sbt.Keys._
 import sbt._
-import _root_.Settings._
+import Settings._
 import org.apache.commons.codec.binary.Base64
 import scalaj.http._
 
